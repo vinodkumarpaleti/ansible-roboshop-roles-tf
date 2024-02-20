@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.jcglobalit.online
+USER_HOST: user.jcglobalit.online
+SHIPPING_HOST: shipping.jcglobalit.online
+CART_HOST: cart.jcglobalit.online
+PAYMENT_HOST: payment.jcglobalit.online
