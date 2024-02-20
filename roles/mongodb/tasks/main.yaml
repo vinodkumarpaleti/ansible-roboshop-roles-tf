@@ -8,6 +8,10 @@
    ansible.builtin.copy:
       src: mongodb.repo
       dest: /etc/yum.repos.d/mongo.repo
+ - name: copy catalogue js
+   ansible.builtin.copy:
+    src: catalogue.js
+    dest: /tmp/catalogue.js
  - name: Install mongoDB
    ansible.builtin.yum:
       name: mongodb-org
@@ -26,3 +30,5 @@
    ansible.builtin.service:
       name: mongod
       state: restarted
+ - name: load catalogue data
+   ansible.builtin.command: mongo --host localhost < /tmp/catalogue.js
